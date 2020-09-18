@@ -1,0 +1,26 @@
+/*responsiveness*/
+@media all and (max-width: 700px){
+    .page {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+     
+    .item_collections{
+        width:100%;
+        display: grid;
+        grid-template-rows: max-content 200px 1fr;
+
+        }
+        h2{text-align: center;}
+
+}
+
+/*media query for orientation*/
+@media all and(orientation:landscape){
+    .h2{ color:green;
+   }
+
+
+}
