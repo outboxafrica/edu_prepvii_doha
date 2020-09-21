@@ -8,11 +8,16 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  border: 2px solid black;
   height: 100vh;
   overflow: auto;
 }
-
+.cart-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+     overflow: auto;
+}
 .item_colletions{
     display: flex;
     flex-direction: column;
@@ -23,7 +28,7 @@ margin: 5px;
 }
 .image{
     height: 10rem;
-    width: 12rem;
+    width: 100%;
 }
 
 
