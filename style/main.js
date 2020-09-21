@@ -53,11 +53,28 @@ function includeProduct(productImage,productOfType,productOfName,productOfPrice)
       <p class="product_name">${productOfName}</p>
       <p class="price">Price:UGX ${productOfPrice}</p>
       </div>
-      <input type="button" value="Delete Item" class="To_Cart_button" />
+      <input type="button" value="Delete Item" class="Delete_Item" />
       </article>
       `;
       cartRow.innerHTML = list;
       cart.append(cartRow);
 
+      deleteItem()
 }
+
+// delete item from cart
+function deleteItem(){
+  const removeProduct = document.querySelectorAll('.Delete_Item');
+  console.log(removeProduct);
+  //Remove Item from Cart
+  removeProduct.forEach(removeBtns => {
+      removeBtns.addEventListener('click', (event)=>{
+          event.target.parentElement.parentElement.remove();
+          });
+      });
+}
+
+
+
+
 
