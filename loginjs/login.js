@@ -10,6 +10,13 @@ var data = [
         "password":"peter1234"
     }
 ]
+// var data = require('../data/users.json');
+
+// var mydata = '../data/users.json';
+// console.log(mydata);
+
+console.log(window.location.pathname);
+
 document.getElementById('submit').addEventListener('click',submit);
 let userCheck = (dataObj,mail) => {
     let user = null;
@@ -23,22 +30,35 @@ let userCheck = (dataObj,mail) => {
     });
     return user;
 }
+let domErrWriting = stri => {
+    document.querySelector("#err").innerHTML=stri;
+    
+}
 function submit(e) {
     e.preventDefault()
-    // alert("Hello");
     var mail=document.getElementById("email").value;
     var password = document.querySelector('#password').value;
-    
-    var user = userCheck(data,mail);
+    const user = userCheck(data,mail);
     console.log(user);
     if (mail =="" || password =="") {
-        alert("Please input either ur email or password");
-    }
-    if (user==null) {
-        alert(`No user with email: ${mail}  pliz try registering`);
+        var stri = 'Please input either ur email or password';
+        domErrWriting(stri);
+    }else if (user==null) {
+        var stri =`No user with email: ${mail}  pliz try registering`;
+        domErrWriting(stri);
     }else if (user!=null && user.password == password) {
         alert(`Welcom Peter ${user.username}`);
+        domErrWriting("Successfully Logged In");
+        document.getElementById("err").href = "homePage.html";
+        // window.location.assign(window.location.href.substr(0,72).concat('homePage.html'));
+        // // if (document.location.href == window.location.href.substr(0,72).concat('homePage.html')) {
+        // //     
+        // // }
+        localStorage.setItem('user',JSON.stringify(user));
+        document.location.href = ('./homePage.html');
+        
     }else{
-        alert("Check ur password");
+        var stri = "Check ur password";
+        domErrWriting(stri);
     }
 }
