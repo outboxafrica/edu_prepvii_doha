@@ -53,7 +53,7 @@ function includeProduct(productImage,productOfType,productOfName,productOfPrice)
       <p class="product_name">${productOfName}</p>
       <p class="price">Price:UGX ${productOfPrice}</p>
       </div>
-      <input type="button" value="Add to cart" class="To_Cart_button" />
+      <input type="button" value="Delete Item" class="To_Cart_button" />
       </article>
       `;
       cartRow.innerHTML = list;
