@@ -14,7 +14,7 @@ var data = [
 
 // var mydata = '../data/users.json';
 // console.log(mydata);
-
+localStorage.setItem('data',JSON.stringify(data));
 console.log(window.location.pathname);
 
 document.getElementById('submit').addEventListener('click',submit);
