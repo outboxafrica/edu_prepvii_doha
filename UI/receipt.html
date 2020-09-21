@@ -1,11 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>receipt</title>
+    <script src="..\receipt\orderform.js"></script>
+    <!--style section-->
+    <style>
+        .page-details {
+            padding: 0 30px 0 30px;
+        }
+
+        footer {
+            display: block;
+            text-align: center;
+            padding: 3px;
+            background-color: DarkSalmon;
+            color: black;
+            width: 100%;
+
+        }
+
+        #button {
+            width: 30%;
+            height: 40px;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+        }
+
+        input[type=email] {
+            width: 30%;
+            height: 40px;
+            border-radius: 5px;
+        }
+        .total{font-size: x-large;}
+
+
+    </style>
+
 </head>
+
 <body>
     
+    <!--header-->
+    <h1>Shopping cart</h1>
+    <!--Display Total-->
+    <p class="total">Total</p>
+
+    <section class="page-details" id="page-details">
+        <form name="orderform" action="thankyou.js" onsubmit="return validateForm()" method="post">
+            <!--form-details-->
+            <p>Enter your email address. This address will be used to send you order status updates</p></br>
+            <input type="email" name="email" id="" placeholder="Enter your email address" size="50px" required></br></br>
+            <h3>Choose mode of payment</h3>
+            <input type="radio" name="payment" value="1">On Delivery<br><br>
+            <input type="radio" name="payment" value="2">In cash<br><br>
+            <input type="checkbox" name="" id="" required>I agree with Terms & conditions</br></br>
+            <input type="checkbox" name="" id=""> Keep me up to date on news and exlusive offers</br></br>
+            <input type="submit" name="order" value="Place Order" id="button">
+           
+        </form>
+        <h4> Need help?</h4>
+        <p>Call: +256 757 979 727<p>
+    </section>
+    <!--footer-->
+    <footer>
+        <p>Author: Doha-Group</p>
+        <p>&copy; All rights reserved to Doha-Group </a></p>
+    </footer>
 </body>
+
 </html>
