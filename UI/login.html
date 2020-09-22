@@ -7,12 +7,10 @@
     <link href="../style/login.css" rel="stylesheet">
   </head>
   <body>
-  <script src="../loginjs/login.js"></script>
-  <script src="../loginjs/homeloginRespons.js"></script>
      <div class="page">
         <div id="section1">
             <header>
-                <a href="homePage.html">
+                <a href="./index.html">
                     <div id="logo">
                         EDUshop
                     </div>
@@ -23,16 +21,17 @@
             </p>
         </div>
         <div id="section2">
+            <small id="err"></small>
             <form align="center">
                 <ul>
                     <li>
-                        <input type="email" placeholder="Email" class="list-item">
+                        <input type="email" placeholder="Email" class="list-item" id="email">
                     </li>
                     <li>
-                        <input type="password" placeholder="Password" class="list-item">
+                        <input type="password" placeholder="Password" class="list-item" id="password">
                     </li>
                     <li>
-                        <button class="button" align="center">
+                        <button class="button" align="center" id="submit">
                             SIGN IN
                         </button>
                     </li>
@@ -41,7 +40,7 @@
                     </li>
                     <li>
                         <button align="center" class="button">
-                            <a href="createAccount.html">SIGN UP</a>
+                            <a href="./createAccount.html">SIGN UP</a>
                         </button>
                     </li>
                     
@@ -50,6 +49,7 @@
             </form>
         </div>
      </div>
-      
+     <script type="text/javascript" src="../loginjs/login.js"></script>
+     <script type="text/javascript" src="../loginjs/homeloginRespons.js"></script>
   </body>
 </html>

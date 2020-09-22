@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="../style/main.css">
     <title>home page</title>
   </head>
   <body>
@@ -13,8 +13,12 @@
           <div class="logo"><a href="#">EDUshop</a></div>
           <div class="nav-menu">
             <ul class="nav-menu-list-group">
+              <h3 id="suc"></h3>
               <li class="nav-menu-list">
-                <input type="text" id="input" class="input" placeholder="Search" value=""></li>
+                <small id="err"></small>
+                <input type="text" id="input" class="input" placeholder="Search" value="">
+                <input type="submit" value="search" id="submit">
+              </li>
                 <li class="nav-menu-list">
                   <a href="#">Home</a>
                 </li>
@@ -26,11 +30,14 @@
         </nav>
       </header>
       <!-- code will be in the page div -->
+      
     <div class="page">
+      
       <div class="."></div>
       <div class="heading_items">
-        <h3 >Items</h3>
-      </div>
+        <h3 >Items</h3> 
+      </div><br>
+      <h4 id="errMess"></h4>
       <!-- item display section -->
       <section class="items_display">
         
@@ -49,8 +56,9 @@
     <!-- footer code here -->
   </footer>
   </div>
-  <script type="module" src="/style/main.js"></script>
-  <!-- <script type="text/javascript" src="../loginjs/homeloginRespons.js"></script> -->
+  <script src="../data/stock/stock.js"></script>
+  <script type="text/javascript" src="../style/main.js"></script>
+  <script type="text/javascript" src="../loginjs/homeloginRespons.js"></script>
 </body>
 
 </html>

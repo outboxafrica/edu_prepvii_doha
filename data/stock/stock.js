@@ -1,4 +1,4 @@
-export var stock = [
+var stock = [
     {
         "productType":"Phones",
         "productImage":"https://i.pinimg.com/564x/48/65/12/4865121816df3d54c84bcf48bb101598.jpg",
@@ -66,3 +66,5 @@ export var stock = [
         "productPrice":"4,930,000"
     }
 ];
+
+localStorage.setItem('stock',JSON.stringify(stock));
