@@ -48,55 +48,146 @@
     position: fixed;
     bottom: 0;
 }
-  .total{
-    font-weight: bold;
-    color: blue;
-  }
 
+.heading_items h3{
+  background-color: #576574;
+
+padding: 2px;
+border-radius: 5px;
+color:white;
+}
+.cart h3{
+  background-color: #576574;
+  /* border:2px solid #222f3e; */
+padding: 2px;
+border-radius: 5px;
+color:white;
+}
 .items_display{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  border: 2px solid black;
+  border-top: 2px solid black;
   height: 100vh;
   overflow: auto;
 }
+
 
 .item_colletions{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 15rem;
     margin: 5px;
-
+}
+.item_colletions p{
+margin: 0.2rem;
 }
 .image{
     height: 10rem;
     width: 12rem;
 }
 .button{
-    background-color:rgb(202, 16, 16);
+    /* background-color:rgb(202, 16, 16); */
     border-radius: 5px;
+    color: rebeccapurple;
     font-size: 18px;
     padding:12px;
     cursor:pointer;
     text-align: center;
     width: 100%;
-    box-shadow: 0px 8px 16px 0px grey; 
+    /* box-shadow: 0px 8px 16px 0px grey;  */
+}
+.To_Cart_button{
+  background-color:#2980b9;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 5px;
+  height: 2rem;
+  width: 100%;
+  border: none;
+}
+.To_Cart_button:hover{
+  background-color:aliceblue;
+  color: #2980b9;
+ }
+ .To_Cart_button:active{
+  background-color: #2980b9;
+  color: aliceblue;
+ }
+.Delete_Item{
+  background-color:#2980b9;
+  color: aliceblue;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  height: 2rem;
+  width: 100%;
+  border: none;
+}
+.Delete_Item:hover{
+  background-color:aliceblue;
+  color: #2980b9;
+}
+.Delete_Item:active{
+  background-color: #2980b9;
+  color: aliceblue;
 }
 .product{
     font-size: 20px;
     font-weight: bold;
 }
-.item_colletions{box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+.item_colletions{
 max-width: 300px;
-margin: auto;
+margin: 5px;
 font-family: Arial, Helvetica, sans-serif;
 /*add card effect*/
 padding:16px;
 text-align:center;
+}
+article{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 background-color:#f1f1f1;
+
+}
+.total_section{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  /* border: 2px solid black; */
+  /* height: 5rem; */
+}
+.total{
+  /* background-color:#2980b9; */
+  color: #2980b9;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  height: 2rem;
+  width: 100%;
+}
+.order{
+  /* display: none; */
+  background-color:#2980b9;
+  color: aliceblue;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  height: 2rem;
+  width: 100%;
+  border: none;
+}
+.order:hover{
+  background-color:aliceblue;
+  color: #2980b9;
+}
+.order:active{
+  background-color: #2980b9;
+  color: aliceblue;
 }
 /* Add rounded corners to the top left and the top right corner of the image */
 .image {
@@ -106,7 +197,7 @@ background-color:#f1f1f1;
     display: block;
     text-align: center;
     padding: 3px;
-    background-color: DarkSalmon;
+    /* background-color: DarkSalmon; */
     color: black;
     width: 100%;
 
