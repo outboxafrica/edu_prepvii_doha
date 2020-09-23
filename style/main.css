@@ -48,17 +48,10 @@
     position: fixed;
     bottom: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
+  .total{
+    font-weight: bold;
+    color: blue;
+  }
 
 .items_display{
   display: flex;
