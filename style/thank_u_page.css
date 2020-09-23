@@ -1,4 +1,4 @@
-.page {
+.welcame {
     margin-left: 33.3%;
     margin-right: 33.3%;
     margin-top: 20%;
@@ -11,7 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
-
 
 
