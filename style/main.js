@@ -1,5 +1,5 @@
 // import {stock} from '../data/stock/stock.js';
-
+var Price = 0;
 var stock = JSON.parse(localStorage.getItem('stock'));
 console.log(stock);
 const displayItems = document.querySelector('.items_display');
@@ -13,8 +13,7 @@ function outPut(stock){
       <div class="product_details">
       <p class="product_Type">${iterate.productType}</p>
       <p class="product_name">${iterate.productName}</p>
-      <p class="price_lable">Price:UGX</p>
-      <p class="price_amount">${iterate.productPrice}</p>
+      <p class="price">Price:UGX ${iterate.productPrice}</p>
       </div>
       <input type="button" value="Add to cart" class="To_Cart_button" />
       </article>
@@ -93,7 +92,6 @@ function search(e) {
     domErrWriting(stri,'red');
   }
   
-
 }
 //result implementation
 function add(e) {
@@ -103,38 +101,64 @@ function add(e) {
     "productType": item.querySelector('.product_Type').innerHTML,
     "productImage": item.querySelector('.image').src,
     "productName": item.querySelector('.product_name').innerHTML,
-    "productPrice": item.querySelector('.price').innerHTML
+    "productPrice": Number(item.querySelector('.price').innerHTML.substring(item.querySelector('.price').innerHTML.lastIndexOf(" "),item.querySelector('.price').innerHTML.length))
   };
-  addProduct(data)
+  console.log(data);
+  // console.log(JSON.parse(localStorage.getItem('price')));
+  addProduct(data);
+  sum();
 }
+
 function addProduct(data) {
   var cart = document.querySelector('.cart-items'); 
         var cartRow = document.createElement('div');
       cartRow.classList.add('item_colletions');
-      var cartItems = document.querySelectorAll('.cart-items')[0];      
+      const cartItems = document.querySelectorAll('.cart-items')[0];      
       var list = 
        `
       <article id="item_colletions" class="item_colletions">
       <img src="${data.productImage}" alt="items" class="image" />
       <div class="product_details">
-
       <p class="product_Type">${data.productType}</p>
       <p class="product_name">${data.productName}</p>
       <p class="price">Price:UGX ${data.productPrice}</p>
-
       </div>
       <input type="button" value="Delete Item" class="Delete_Item" />
       </article>
       `;
       cartRow.innerHTML = list;
       cart.append(cartRow);
-
-      deleteItem()
-      updateCartTotal();
+      deleteItem();
+  
 }
  
+function sum(params) {
+  var cart_items = document.querySelector(".cart-items");
+  console.log(cart_items.children.length >0);
+  var price=0;
+  if (cart_items.children.length >0) {
+    var p = cart_items.querySelectorAll('.price');
+    // console.log(p);
+    p.forEach(element => {
+      //  console.log(element);
+       var fig = Number(element.innerHTML.substring(element.innerHTML.lastIndexOf(" "),element.innerHTML.length));
+      //  console.log(fig);
+       price +=fig;
+      //  console.log(price);
+      Price = price;
+       document.querySelector(".total").innerHTML=price;
+       
+    });
+  }
+}
+document.querySelector('#order').addEventListener('click',e => {
+  e.preventDefault();
+  e.target.style.backgroundColor = 'green';
+  localStorage.setItem('totalPrice',JSON.stringify(Price));
+  document.location.href = ("./receipt.html");
+});
 var selectorItems = document.querySelector(".items_display");
- console.log(selectorItems);
+//  console.log(selectorItems);
  var prodtItem = selectorItems.querySelectorAll('.item_colletions');
  prodtItem.forEach(element => {
    btn=element.querySelector(".To_Cart_button");
@@ -146,38 +170,14 @@ var selectorItems = document.querySelector(".items_display");
 
 // delete item from cart
 function deleteItem(){
-  var removeProduct = document.querySelectorAll('.Delete_Item');
-  console.log(removeProduct);
+  const removeProduct = document.querySelectorAll('.Delete_Item');
+  // console.log(removeProduct);
   //Remove Item from Cart
   removeProduct.forEach(removeBtns => {
+    
       removeBtns.addEventListener('click', event=>{
           event.target.parentElement.parentElement.remove();
+          sum();
           });
       });
-      
 }
-
-// calculating total function
-function updateCartTotal(){
-  var cartItems = document.querySelectorAll('.cart-items')[0];
-  var cartTile = cartItems.querySelectorAll('.item_colletions');
-
-  let total = 0;
-  for (let i = 0; i < cartTile.length; i++) {
-      var cartTile = cartTile[i];
-      var productPrice = cartTile.querySelectorAll('.price_amount')[0];
-      var price =parseInt(productPrice.innerText);
-      console.log(productPrice);
-
-      console.log(typeof(price));
-      console.log(price);
-
-      // const quantity = quantitiyElement.value;
-      total = total + price ;
-      console.log(total);
-
-  }
-  total = total ;
-  document.getElementsByClassName('total')[0].innerText=total;
-}
-

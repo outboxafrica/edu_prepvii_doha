@@ -1,4 +1,8 @@
-    
+  var totalPrice = JSON.parse(localStorage.getItem('totalPrice'));
+  console.log(totalPrice);
+  document.querySelector("#total").innerHTML=totalPrice;
+ 
+   
 //validation for the right email format
 function validateemail() {
 var emailID = document.orderform.email.value;

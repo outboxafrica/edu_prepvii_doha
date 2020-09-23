@@ -1,5 +1,14 @@
-var dataArr = JSON.parse(localStorage.getItem('data'));
-// console.log(dataArr);;
+//Local Storage Data Manuplation 
+function updateData(newdata){
+    var olddata=JSON.parse(localStorage.getItem('data'));
+    localStorage.removeItem('data');
+    newdata.forEach(data =>{
+            olddata.push(data);  
+        });
+    localStorage.setItem('data',JSON.stringify(olddata));
+}
+
+
 let emailExistance = (mail,data) => {
     var mess = false;
     data.forEach(element => {
@@ -77,6 +86,7 @@ document.getElementById('submit').addEventListener('click',validation);
 
 function validation(e) {
     e.preventDefault();
+    var dataArr = JSON.parse(localStorage.getItem('data'));
     var username = document.getElementById('username').value;
     var email =  document.querySelector("#email").value;
     var password = document.querySelector('#password').value;
@@ -120,6 +130,13 @@ function validation(e) {
         });
         domErrWriting(`Successfully Registered as ${data.username} with email ${data.email}`);
         localStorage.setItem('user',JSON.stringify(data));
+        var up_data = JSON.parse(localStorage.getItem('data'));
+        console.log(up_data);
+        up_data.push(data);
+        
+        // updateData(up_data);
+        localStorage.removeItem('data');
+        localStorage.setItem('data',JSON.stringify(up_data));
         document.location.href = ('./homePage.html');
     }
 }

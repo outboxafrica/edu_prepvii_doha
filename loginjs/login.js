@@ -1,20 +1,5 @@
-var data = [
-    {
-        "username":"MUWANGUZI",
-        "email":"muwanguzi51@gmail.com",
-        "password":"peter12346"
-    },
-    {
-        "username":"PETER",
-        "email":"petermuwanguzi51@gmail.com",
-        "password":"peter1234"
-    }
-]
-// var data = require('../data/users.json');
 
-// var mydata = '../data/users.json';
-// console.log(mydata);
-localStorage.setItem('data',JSON.stringify(data));
+var data = JSON.parse(localStorage.getItem('data'));
 console.log(window.location.pathname);
 
 document.getElementById('submit').addEventListener('click',submit);
@@ -30,6 +15,7 @@ let userCheck = (dataObj,mail) => {
     });
     return user;
 }
+
 let domErrWriting = stri => {
     document.querySelector("#err").innerHTML=stri;
     

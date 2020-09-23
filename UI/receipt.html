@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>receipt</title>
-    <script src="..\receipt\orderform.js"></script>
+    
     <!--style section-->
     <style>
         .page-details {
@@ -47,7 +47,7 @@
     <!--header-->
     <h1>Shopping cart</h1>
     <!--Display Total-->
-    <p class="total">Total</p>
+    <p class="total">Total: UGX <span id="total"></span></p>
 
     <section class="page-details" id="page-details">
         <form name="orderform" action="thankyou.js" onsubmit="return validateForm()" method="post">
@@ -70,6 +70,7 @@
         <p>Author: Doha-Group</p>
         <p>&copy; All rights reserved to Doha-Group </a></p>
     </footer>
+    <script src="../receipt js/orderform.js"></script>
 </body>
 
 </html>
