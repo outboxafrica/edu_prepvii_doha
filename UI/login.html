@@ -4,53 +4,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link href="../style/login.css" rel="stylesheet">
+    <link href="../style/login.css" rel="stylesheet" />
   </head>
   <body>
-     <div class="page">
-        <div id="section1">
-            <header>
-                <a href="./index.html">
-                    <div id="logo">
-                        EDUshop
-                    </div>
-                </a>
-            </header> 
-            <p id="para1" align="center">
-                Hello client...<br>To keep in touch with us,<br>please login with your personal info.
-            </p>
-        </div>
-        <div id="section2">
-            <small id="err"></small>
-            <form align="center">
-                <ul>
-                    <li>
-                        <input type="email" placeholder="Email" class="list-item" id="email">
-                    </li>
-                    <li>
-                        <input type="password" placeholder="Password" class="list-item" id="password">
-                    </li>
-                    <li>
-                        <button class="button" align="center" id="submit">
-                            SIGN IN
-                        </button>
-                    </li>
-                    <li id="item3">
-                        If you don't have an account,
-                    </li>
-                    <li>
-                        <button align="center" class="button">
-                            <a href="./createAccount.html">SIGN UP</a>
-                        </button>
-                    </li>
-                    
-                </ul>
-                
-            </form>
-        </div>
-     </div>
-     <script src="../data/users.js"></script>
-     <script type="text/javascript" src="../loginjs/login.js"></script>
-     <script type="text/javascript" src="../loginjs/homeloginRespons.js"></script>
+    <div class="page">
+      <div id="section1">
+        <header>
+          <a href="./index.html">
+            <div id="logo">EDUshop</div>
+          </a>
+        </header>
+        <p id="para1" align="center">
+          Hello client...<br />To keep in touch with us,<br />please login with
+          your personal info.
+        </p>
+      </div>
+      <div id="section2">
+        <small id="err"></small>
+        <form align="center">
+          <ul>
+            <li>
+              <input
+                type="email"
+                placeholder="Email"
+                class="list-item"
+                id="email"
+              />
+            </li>
+            <li>
+              <input
+                type="password"
+                placeholder="Password"
+                class="list-item"
+                id="password"
+              />
+            </li>
+            <li>
+              <button class="button" align="center" id="submit">SIGN IN</button>
+            </li>
+            <li id="item3">If you don't have an account,</li>
+            <li>
+              <button align="center" class="button">
+                <a href="./createAccount.html">SIGN UP</a>
+              </button>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+    <script src="../data/users.js"></script>
+    <script type="text/javascript" src="../loginjs/login.js"></script>
+    <script
+      type="text/javascript"
+      src="../loginjs/homeloginRespons.js"
+    ></script>
   </body>
 </html>
