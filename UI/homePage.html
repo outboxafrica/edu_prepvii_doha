@@ -8,7 +8,27 @@
   </head>
   <body>
       <!-- header -->
-      
+      <header>
+        <nav class="navbar">
+          <div class="logo"><a href="#">EDUshop</a></div>
+          <div class="nav-menu">
+            <ul class="nav-menu-list-group">
+              <h3 id="suc"></h3>
+              <li class="nav-menu-list">
+                <small id="err"></small>
+                <input type="text" id="input" class="input" placeholder="Search" value="">
+                <input type="submit" value="search" id="submit">
+              </li>
+                <li class="nav-menu-list">
+                  <a href="#">Home</a>
+                </li>
+                 <li class="nav-menu-list">
+                <a href="#cart">Cart</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
       <!-- code will be in the page div -->
       
     <div class="page">
@@ -27,28 +47,24 @@
   <!-- cart display section -->
   <section id="cart" class="cart">
     <h3>Cart</h3>
+    <!-- <h4 id="total"></h4> -->
     <div class="cart-items">
     <!-- implemented by javascript   -->
     </div>
   </section>
   <section class="total_section">
-     <p class="total">4000000</p>
+     <p class="total"></p>
+     <input type="submit" value="Place Order" id="order">
     </section>
   <!-- footer section -->
   <footer class="footer">
     <!-- footer code here -->
-   
-      <p>Author: Doha-Group</p>
-      <p>&copy; All rights reserved to Doha-Group </a></p>
-
   </footer>
   </div>
   <script src="../data/stock/stock.js"></script>
-<script type="text/javascript" src="../style/main.js"></script>
+  <script src="../data/users.js"></script>
+  <script type="text/javascript" src="../style/main.js"></script>
   <script type="text/javascript" src="../loginjs/homeloginRespons.js"></script>
 </body>
 </html>
-<<<<<<< HEAD
-=======
 <!-- <p class="total">Total: UGX:4000,000</p> -->
->>>>>>> 7c7986564ec310a252615710331067e50b22884d

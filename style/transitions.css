@@ -1,0 +1,28 @@
+/* header/nav-bars */
+
+.intro_page {
+    /* transition-duration: 2s; */
+    animation-name: and;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+  }
+  @keyframes and {
+    0% {
+        background: url("../images/i\ phone.jpg") no-repeat center center / cover;
+
+    }
+    30% {
+        background: url("../images/laptop.jpg") no-repeat center center / cover;
+    }
+    65% {
+        background: url("../images/screen.jpg") no-repeat center center / cover;
+    }
+
+    100% {
+        background: url("../images/i\ phone.jpg") no-repeat center center / cover;
+    }
+  }
+  
+  /* projects */
+  
