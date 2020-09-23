@@ -147,4 +147,7 @@ function validation(e) {
     localStorage.setItem("data", JSON.stringify(up_data));
     document.location.href = "./homePage.html";
   }
+
 }
+
+

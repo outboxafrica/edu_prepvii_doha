@@ -44,4 +44,8 @@ function submit(e) {
     var stri = "Check ur password";
     domErrWriting(stri);
   }
+
 }
+
+
+
