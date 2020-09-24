@@ -25,10 +25,10 @@ function submit(e) {
   const user = userCheck(data, mail);
   console.log(user);
   if (mail == "" || password == "") {
-    var stri = "Please input either ur email or password";
+    var stri = "Please input either your email or password";
     domErrWriting(stri);
   } else if (user == null) {
-    var stri = `No user with email: ${mail}  pliz try registering`;
+    var stri = `No user with email: ${mail}  please try registering`;
     domErrWriting(stri);
   } else if (user != null && user.password == password) {
     alert(`Welcom Peter ${user.username}`);
@@ -41,7 +41,7 @@ function submit(e) {
     localStorage.setItem("user", JSON.stringify(user));
     document.location.href = "./homePage.html";
   } else {
-    var stri = "Check ur password";
+    var stri = "Check your password";
     domErrWriting(stri);
   }
 
