@@ -19,6 +19,41 @@
   h3 {
     color: #535c68;
   }
+
+/* Humberger menu */
+.side-menu{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  opacity: 0.9;
+  overflow: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  }
+  .side-menu a{
+  padding: 10px 10px 10px 30px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #ccc;
+  display: block;
+  transition: 0.3s;
+  }
+  .side-menu a:hover{
+  color:#fff;
+  }
+  .side-menu .button-close{
+  position: absolute;
+  top: 0;
+  right: 22px;
+  font-size: 36px;
+  margin-left: 50px;
+  }
+
+
   
   .logo a {
     font-weight: bold;
@@ -31,13 +66,31 @@
     font-family: cursive;
     letter-spacing: 5px;
   }
-  hr{
-    border: 1px solid grey;
-  
+  .open-slide{
+    margin: 15px 4rem 5px 0;
   }
-  /* .product_details{
-    font-size: 12px;
-  } */
+  .back{
+    font-size: bold;
+    display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 3px;
+    width: 4rem;
+      height: 1.5rem;
+      background-color: #576574;
+      color: white;
+      border-radius: 5px;
+      padding: 2px;
+  }
+  .back:hover{
+      background-color: white;
+      color: #576574;
+  }
+  .back:active{
+    background-color: white;
+    color: #576574;
+  }
   .button{
     /* border: none; */
     border:2px solid black;

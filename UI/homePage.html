@@ -11,16 +11,18 @@
       <header>
         <nav class="navbar">
           <div class="logo"><a href="#">EDUshop</a></div>
+          
           <div class="nav-menu">
             <ul class="nav-menu-list-group">
               
               <li class="nav-menu-list">
                 <small id="err"></small>
-                <input type="text" id="input" class="input" placeholder="Search" value="" autofocus>
+                <input type="text" id="input" class="input" placeholder="Search,Tvs,Phones,Laptops" value="" autofocus>
                 <!-- <input type="submit" value="search" id="submit"> -->
               </li>
-                <li class="nav-menu-list" id="display">
-                  <a href="#">Items</a>
+              <div class="gone">
+                <li class="nav-menu-list">
+                  <a href="#">All Items</a>
                 </li>
                  <li class="nav-menu-list">
                 <a href="#cart">Cart</a>
@@ -28,16 +30,45 @@
               <li class="nav-menu-list">
                 <a href="../index.html">Logout</a>
               </li>
+            </div>
+            <span class="open-slide">
+              <a href="#" onclick="openSlide()">
+              Menu
+              </a>
+              </span>
             </ul>
           </div>
         </nav>
+       
       </header>
+      <!-- side bar -->
+      <div class="side-menu">
+        <a href="#" class="button-close" 
+        onclick="closeSlide()">&times;</a>
+        <ul class="closeSlide-nav-menu-list-group">
+          <li class="closeSlide-nav-menu-list">
+            <small id="err"></small>
+          </li>
+            <li id="display" class="closeSlide-nav-menu-list">
+              <a href="#">All Items</a>
+            </li>
+             <li class="closeSlide-nav-menu-list">
+            <a href="#cart">Cart</a>
+          </li>
+          <li class="closeSlide-nav-menu-list">
+            <a href="../index.html">Logout</a>
+          </li>
+        
+        </ul>
+       </div>
+       <!-- End side bar -->
       <!-- code will be in the page div -->
       
     <div class="page">
       
       <div class="."></div>
       <div class="heading_items">
+        <a class="back" href="../index.html">back</a>
         <h3 >Items </h3> 
         <h4 id="suc"> - </h4>
         <h4 id="errMess"></h4>
@@ -69,7 +100,9 @@
   <script src="../data/stock/stock.js"></script>
   <script src="../data/users.js"></script>
   <script type="text/javascript" src="../style/main.js"></script>
+  <script type="text/javascript" src="../style/humbergerMenu.js"></script>
   <script type="text/javascript" src="../loginjs/homeloginRespons.js"></script>
 </body>
 </html>
 <!-- <p class="total">Total: UGX:4000,000</p> -->
+<!-- id="display" -->

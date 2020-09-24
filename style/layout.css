@@ -19,7 +19,9 @@ header {
     margin: 7px;
     padding: 5px;
   }
-  
+  .gone{
+    display: flex;
+  }
   .nav-menu-list-group {
     display: flex;
     margin: 10px;
