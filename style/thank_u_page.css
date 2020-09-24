@@ -1,17 +1,32 @@
-.welcame {
-    margin-left: 33.3%;
-    margin-right: 33.3%;
-    margin-top: 20%;
-    margin-bottom: 20%;
-    color: rgb(0, 132, 255);
-    background-color: #e3dfc88a;
-    border-radius: 6px;
-    font-family: Arial, Helvetica, sans-serif;
 
+* {
+   
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+.welcame {
+    height: 100vh;
+    /* border: 2px solid #2980b9; */
+    border-radius: 7px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    font-weight: bold;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    background-color: #576574;
+  padding: 5px;
+    color: white;
+    font-size: 1.2rem;
+  
+    font-family: cursive;
+    letter-spacing: 5px;
+  }
 
