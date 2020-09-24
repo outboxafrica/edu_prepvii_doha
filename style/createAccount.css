@@ -1,0 +1,58 @@
+@import url("./app.css");
+@import url("./layout.css");
+@import url("mediaQueries.css");
+
+.page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+
+}
+.logo{
+    font-weight: bold;
+    color: aliceblue;
+    border-radius: 5px;
+    background-color: #2980b9;
+    text-align: center;
+    font-size: 2rem;
+    width: 96%;
+}
+.content{
+    width: 70%;
+    /* border: 2px solid #2980b9; */
+    border-radius: 5px;
+}
+input{
+    width: 95%;
+    border: none;
+    border-bottom: 2px solid #2980b9;
+    padding: 5px;
+    margin: 1rem;
+}
+#err{
+    color: red;
+}
+.submit{
+    margin: 1rem;
+    text-decoration: none;
+    background-color:#2980b9;
+    color: aliceblue;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    height: 2rem;
+    width: 95%;
+    border: none;
+}
+.submit:hover{
+    background-color:aliceblue;
+  color: #2980b9;
+}
+.submit:active{
+    background-color:aliceblue;
+    color: #2980b9;
+}

@@ -34,10 +34,14 @@ header {
   }
   
 .heading_items{
+    margin: 0 0.9rem 0 0.9rem;
+    /* border: 2px solid black; */
     position: relative;
-    margin-top: 53px;
+    margin-top: 60px;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 }
 .heading_items p{
     padding: 2rem;
