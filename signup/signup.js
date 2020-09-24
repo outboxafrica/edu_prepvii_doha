@@ -104,11 +104,11 @@ function validation(e) {
     data.password == "" ||
     data.confpassword == ""
   ) {
-    domErrWriting("U cant submit with a missing field");
+    domErrWriting("You can't submit with a missing field");
     response.push({
-      missingFeild: "U cant submit with a missing field",
+      missingFeild: "You can't submit with a missing field",
     });
-    console.log("U cant submit with a missing field");
+    console.log("You can't submit with a missing field");
   } else if (emailExistance(data.email, dataArr) == true) {
     response.push({
       mailErr: `${data.email} already exists please login or use another Email Address`,
@@ -118,9 +118,9 @@ function validation(e) {
     );
   } else if (emailValidity(data.email) == false) {
     response.push({
-      mailNotValid: `${data.email} is not a Valid Formate is 'example@mail.com'`,
+      mailNotValid: `${data.email} is not a valid email format. Take an example 'example@mail.com'`,
     });
-    domErrWriting(`${data.email} is not a Valid Formate is 'example@mail.com'`);
+    domErrWriting(`${data.email} is not a valid email format. Take an example 'example@mail.com'`);
   } else if (data.password.length < 8) {
     response.push({
       passLen: "Password Length should be Greater than 8 characters",
@@ -128,9 +128,9 @@ function validation(e) {
     domErrWriting("Password Length should be Greater than 8 characters");
   } else if (!(data.password === data.confpassword)) {
     response.push({
-      passConf: "Passwords Dont Much",
+      passConf: "Passwords Don't Much, Please check",
     });
-    domErrWriting("Passwords Dont Much");
+    domErrWriting("Passwords Don't Much, Please check");
   } else {
     response.push({
       sucReg: `Successfully Registered as ${data.username} with email ${data.email}`,

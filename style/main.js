@@ -72,7 +72,7 @@ let displayItem = (item) => {
       </article>
       `;
     });
-    h4.innerHTML = "Items searched are here";
+    h4.innerHTML = "Items you searched for are here";
     displayItems.innerHTML = list;
 
     var selectorItems = document.querySelector(".items_display");
@@ -84,7 +84,7 @@ let displayItem = (item) => {
     });
     // document.querySelector(".logo").addEventListener('click',outPut(stock));
   }
-  document.querySelector(".logo").addEventListener("click", (e) => {
+  document.querySelector("#display").addEventListener("click", (e) => {
     e.preventDefault();
     if (stock.length > 0) {
       var list = stock.map(function (iterate) {
@@ -123,19 +123,19 @@ function search(e) {
       stock.forEach((element) => {
         if (element.productType.toLowerCase() == searchValue.toLowerCase()) {
           searchedItem.push(element);
-          domErrWriting("here are your searchs", "green");
+          domErrWriting("Here are your searchs", "green");
         } else if (
           element.productName.toLowerCase() == searchValue.toLowerCase()
         ) {
           searchedItem.push(element);
-          domErrWriting("here are your searchs", "green");
+          domErrWriting("Here are your searchs", "green");
         } //else {
         //   domErrWriting('Item may not exist in our stores','orange');
         // }
       });
       displayItem(searchedItem);
     } else if (searchValue.length <= 0) {
-      var stri = `Pliz input some item to search`;
+      var stri = `Please input some item to search`;
       domErrWriting(stri, "red");
     }
   }
