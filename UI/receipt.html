@@ -6,24 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../style/receipt.css" rel="stylesheet" />
     <title>receipt</title>
-    
-    <!--style section-->
-    <style>
-       
-
-
-    </style>
 
 </head>
 
 <body>
-    
+    <div class="page_receipt">
     <!--header-->
-    <div class="logo"><h1></h1>EDUshop</h1></div></h1>
+    <header>
+        <nav class="navbar">
+          <div class="logo"><p >EDUshop</p></div>
+          <div class="nav-menu">
+            <ul class="nav-menu-list-group">
+              <li class="nav-menu-list">
+                <a href="../index.html">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <div class="contens">
+    <div ><a class="back" href="./homePage.html">back</a></div>
     <!--Display Total-->
+    <div class="info">
     <p>Hey <strong id="username"></strong> at <h3 id="email"></h3></p>
     <p class="total">Total: UGX<span id="total"></span></p>
-
+</div>
     <section class="page-details" id="page-details">
         <form name="orderform" action="thankyou.js"  method="post">
             <!--form-details-->
@@ -40,12 +47,14 @@
         <h4> Need help?</h4>
         <p>Call: +256 757 979 727<p>
     </section>
+    </div>
     <!--footer-->
     <footer>
         <p>Author: Doha-Group</p>
         <p>&copy; All rights reserved to Doha-Group </a></p>
     </footer>
     <script src="../receipt js/orderform.js"></script>
+</div>
 </body>
 
 </html>

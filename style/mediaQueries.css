@@ -1,23 +1,44 @@
 /*responsiveness*/
-@media (max-width: 600px) {
+@media (max-width: 800px) {
+  .gone{
+    display:none;
+transform: 0.5s;
+}
 .navbar{
     width: 100%;
     display: flex;
 }
-    .logo a{
+    /* .logo a{
         width: 1px;
     display: none;
-}
+} */
+
 .input{
-    width: 4rem;
+    width: 6rem;
+    margin: 10px 0 5px 0;
+
 }
 .nav-menu-list-group{
     display: flex;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
 }
+.page_receipt{
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-menu-list a {
+    /* margin-right: 5px; */
+    padding: 5px;
+    letter-spacing: 2px;
+    color: aliceblue;
+  }
 
 }
-@media (min-width: 600px) {
-
+@media (min-width: 800px) {
+ .nav-menu-list-group .open-slide a{
+    display: none;
+  }
 }

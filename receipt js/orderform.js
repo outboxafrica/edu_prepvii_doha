@@ -3,7 +3,7 @@ console.log(totalPrice);
 document.querySelector("#total").innerHTML = totalPrice.price;
 document.querySelector("#username").innerHTML = totalPrice.user.username;
 document.querySelector("#email").innerHTML = totalPrice.user.email;
-document.getElementById("button").addEventListener("click", (e) => {
+document.getElementById("button").addEventListener("click", e => {
   e.preventDefault();
   document.location.href = "./thank_u_page.html";
 });
