@@ -4,6 +4,21 @@ var stock = JSON.parse(localStorage.getItem("stock"));
 console.log(stock);
 const displayItems = document.querySelector(".items_display");
 // Display items on home page
+
+function serialID(){
+  var numberGroupOne = (parseInt)(Math.random()*1000);
+  var numberGroupTwo = (parseInt)(Math.random()*1000);
+  var numberGroupThree = (parseInt)(Math.random()*1000);
+  var serial = `${numberGroupOne}-${numberGroupTwo}-${numberGroupThree}`;
+  // console.log(numberGroupOne,numberGroupTwo,numberGroupThree);
+  // var serialNumbers = `
+  // <p>ID: ${numberGroupOne}-${numberGroupTwo}-${numberGroupThree}</p>
+  // `;
+  // var id = document.querySelector('.serial_number');
+  // id.innerHTML = serialNumbers;
+  return serial;
+}
+
 function outPut(stock) {
   if (stock.length > 0) {
     var list = stock.map(function (iterate) {
@@ -31,13 +46,18 @@ let domErrWriting = (stri, color) => {
   document.getElementById("err").innerHTML = stri;
   document.getElementById("err").style.color = color;
   document.getElementById("input").style.borderColor = color;
+  setTimeout(() => {
+    document.getElementById("err").innerHTML = '';
+  // document.getElementById("err").style.color = color;
+  document.getElementById("input").style.borderColor = null;
+  }, 10000);
+  
   // console.log(stri);
 };
 let displayItem = (item) => {
   console.log(item);
   if (item.length <= 0) {
     h4.innerHTML = "Item is not available";
-    console.log("PETER");
   } else {
     var list = item.map(function (iterate) {
       return `
@@ -62,13 +82,41 @@ let displayItem = (item) => {
       btn = element.querySelector(".To_Cart_button");
       btn.addEventListener("click", add);
     });
+    // document.querySelector(".logo").addEventListener('click',outPut(stock));
   }
+  document.querySelector(".logo").addEventListener('click', e =>{
+    e.preventDefault()
+    if (stock.length > 0) {
+      var list = stock.map(function (iterate) {
+        return `
+        <article id="item_colletions" class="item_colletions">
+        <img src="${iterate.productImage}" alt="items" class="image" />
+        <div class="product_details">
+        <p class="product_Type">${iterate.productType}</p>
+        <p class="product_name">${iterate.productName}</p>
+        <p class="price">Price:UGX ${iterate.productPrice}</p>
+        </div>
+        <input type="button" value="Add to cart" class="To_Cart_button" />
+        </article>
+        `;
+      });
+      displayItems.innerHTML = list;
+      var selectorItems = document.querySelector(".items_display");
+      console.log(selectorItems);
+      var prodtItem = selectorItems.querySelectorAll(".item_colletions");
+      prodtItem.forEach((element) => {
+      btn = element.querySelector(".To_Cart_button");
+      btn.addEventListener("click", add);
+    });
+    }
+  });
 };
 
-document.getElementById("submit").addEventListener("click", search);
-
+// document.getElementById("submit").addEventListener("click", search);
+document.getElementById("input").addEventListener("keyup",search);
 function search(e) {
-  e.preventDefault();
+  if (e.keyCode == 13) { 
+    e.preventDefault();
   var searchValue = document.querySelector("#input").value;
   var searchedItem = [];
   if (searchValue.length > 0) {
@@ -90,6 +138,8 @@ function search(e) {
     var stri = `Pliz input some item to search`;
     domErrWriting(stri, "red");
   }
+} 
+  
 }
 //result implementation
 function add(e) {
@@ -156,12 +206,20 @@ function sum(params) {
       Price = price;
       document.querySelector(".total").innerHTML = price;
     });
+  }else{
+    Price=price;
+    document.querySelector(".total").innerHTML = price;
   }
 }
 document.querySelector("#order").addEventListener("click", (e) => {
   e.preventDefault();
   e.target.style.backgroundColor = "green";
-  localStorage.setItem("totalPrice", JSON.stringify(Price));
+  var serial = serialID();
+  localStorage.setItem("totalPrice", JSON.stringify({
+    "user": JSON.parse(localStorage.getItem("user")),
+    "price": Price,
+    "serialID":serial
+  }));
   document.location.href = "./receipt.html";
 });
 var selectorItems = document.querySelector(".items_display");
