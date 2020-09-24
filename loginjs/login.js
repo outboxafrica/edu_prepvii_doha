@@ -44,12 +44,8 @@ function submit(e) {
     var stri = "Check ur password";
     domErrWriting(stri);
   }
-<<<<<<< HEAD
 
 }
 
-
-
-=======
 }
->>>>>>> fab4d6858026af765ae10f5b47f2fcd667246465
+
