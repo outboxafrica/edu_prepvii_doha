@@ -77,4 +77,7 @@ var stock = [
   },
 ];
 
+
 localStorage.setItem("stock", JSON.stringify(stock));
+
+

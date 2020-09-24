@@ -13,10 +13,10 @@ document.getElementById("button").addEventListener("click", (e) => {
 //   let x = emailID.indexOf("@");
 //   let y = emailID.lastIndexOf(".");
 
-//   if (y < 1 || y - x < 2) {
-//     alert("Please enter correct email ID");
-//     document.orderform.email.focus();
-//     return false;
-//   }
-//   return true;
-// }
+  // if (y < 1 || y - x < 2) {
+  //   alert("Please enter correct email ID");
+  //   document.orderform.email.focus();
+  //   return false;
+  // }
+  // return true;
+

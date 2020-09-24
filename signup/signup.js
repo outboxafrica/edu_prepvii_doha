@@ -144,4 +144,7 @@ function validation(e) {
 
     document.location.href = "./homePage.html";
   }
+
 }
+
+
