@@ -47,13 +47,14 @@
     <!--header-->
     <h1>Shopping cart</h1>
     <!--Display Total-->
+    <p>Hey <strong id="username"></strong> at <h3 id="email"></h3></p>
     <p class="total">Total: UGX<span id="total"></span></p>
 
     <section class="page-details" id="page-details">
-        <form name="orderform" action="thankyou.js" onsubmit="return validateForm()" method="post">
+        <form name="orderform" action="thankyou.js"  method="post">
             <!--form-details-->
-            <p>Enter your email address. This address will be used to send you order status updates</p></br>
-            <input type="email" name="email" id="" placeholder="Enter your email address" size="50px" required></br></br>
+            <!-- <p>Enter your email address. This address will be used to send you order status updates</p></br> -->
+            <!-- <input type="email" name="email" id="" placeholder="Enter your email address" size="50px" required></br></br> -->
             <h3>Choose mode of payment</h3>
             <input type="radio" name="payment" value="1">On Delivery<br><br>
             <input type="radio" name="payment" value="2">In cash<br><br>
